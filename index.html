@@ -11,37 +11,114 @@
     a:visited{ color:black; text-decoration: none; }
     a:hover{color:black ;text-decoration: none;}
 
- .text1{position:fixed; top:13%; /*in conjunction with left property, decides the text position */ left:-1%; width:; /*optional, though better have one */ font-size:350% ; font-weight:bold;  font-family: 'Nanum Gothic', sans-serif; -ms-transform: rotate(90deg); /* IE 9 */
+ .text1{position:absolute; top:13%; /*in conjunction with left property, decides the text position */ left:-1%; width:; /*optional, though better have one */ font-size:350% ; font-weight:bold;  font-family: 'Nanum Gothic', sans-serif; -ms-transform: rotate(90deg); /* IE 9 */
     -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
     transform: rotate(90deg);  color: white; -webkit-text-stroke: 1px #00ff}
-    .text2{position: fixed; top:12%; /*in conjunction with left property, decides the text position */ left:90%; width:auto; /*optional, though better have one */ font-size:350% ;  ; font-family: 'Nanum Gothic', sans-serif; -ms-transform: rotate(90deg); /* IE 9 */
+    .text2{position: absolute; ; top:12%; /*in conjunction with left property, decides the text position */ left:90%; width:auto; /*optional, though better have one */ font-size:350% ;  ; font-family: 'Nanum Gothic', sans-serif; -ms-transform: rotate(90deg); /* IE 9 */
     -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
     transform: rotate(90deg); color: blue;}
-    .text3{position: fixed; top:82%; /*in conjunction with left property, decides the text position */ left:91%; width:auto; /*optional, though better have one */ font-size:350% ;  ; font-family: 'Nanum Gothic', sans-serif; -ms-transform: rotate(90deg); /* IE 9 */
+    .text3{position: absolute; top:82%; /*in conjunction with left property, decides the text position */ left:91%; width:auto; /*optional, though better have one */ font-size:350% ;  ; font-family: 'Nanum Gothic', sans-serif; -ms-transform: rotate(90deg); /* IE 9 */
     -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
     transform: rotate(90deg); color: blue;}
-    .text4{position: absolute; top:70%; /*in conjunction with left property, decides the text position */ left:8%; width:500px; /*optional, though better have one */ font-size:800% ; font-weight:bold ; font-family: 'Nanum Gothic', sans-serif; color: white; -webkit-text-stroke: 1px #00ff}
-    .text5{position: absolute; top:60%; /*in conjunction with left property, decides the text position */ left:29%; width:300px; /*optional, though better have one */ font-size:700% ; font-weight:bold ; font-family: 'Nanum Gothic', sans-serif; color: white; -webkit-text-stroke: 1px #00ff}
-    .text6{position: absolute; top:10%; /*in conjunction with left property, decides the text position */ left:40%; width:500px; /*optional, though better have one */ font-size:900% ; font-weight:bold ; font-family: 'Nanum Gothic', sans-serif; color: white; -webkit-text-stroke: 1px #00ff}
-    .text7{position: absolute; top:40%; /*in conjunction with left property, decides the text position */ left:80%; width:200px; /*optional, though better have one */ font-size:400% ; font-weight:bold ; font-family: 'Nanum Gothic', sans-serif; color: white; -webkit-text-stroke: 1px #00ff}
-    .text8{position: absolute; top:50%; /*in conjunction with left property, decides the text position */ left:60%; width:400px; /*optional, though better have one */ font-size:700% ; font-weight:bold ; font-family: 'Nanum Gothic', sans-serif; color: white; -webkit-text-stroke: 1px #00ff}
+    
+  
+
+  .image1{position: absolute; top:10%; /*in conjunction with left property, decides the text position */ left:30%;  /*optional, though better have one */;}
+  .image1 img:last-child{display: none}
+  .image1:hover img:first-child{display: none}
+  .image1:hover img:last-child{display: inline-block;}
+
+  .image2{position: absolute; top:45%; /*in conjunction with left property, decides the text position */ left:26%;  /*optional, though better have one */;}
+  .image2 img:last-child{display: none}
+  .image2:hover img:first-child{display: none}
+  .image2:hover img:last-child{display: inline-block;}
+
+  .image3{position: absolute; top:75%; /*in conjunction with left property, decides the text position */ left:6%;  /*optional, though better have one */;}
+  .image3 img:last-child{display: none}
+  .image3:hover img:first-child{display: none}
+  .image3:hover img:last-child{display: inline-block;}
+
+  .image4{position: absolute; top:58%; /*in conjunction with left property, decides the text position */ left:60%;  /*optional, though better have one */;}
+  .image4 img:last-child{display: none}
+  .image4:hover img:first-child{display: none}
+  .image4:hover img:last-child{display: inline-block;}
+
+  .image5{position: absolute; top:40%; /*in conjunction with left property, decides the text position */ left:80%;  /*optional, though better have one */;}
+  .image5 img:last-child{display: none}
+  .image5:hover img:first-child{display: none}
+  .image5:hover img:last-child{display: inline-block;}
+  
+  .draggable1{position: fixed; top:50%; /*in conjunction with left property, decides the text position */ left:5%;  /*optional, though better have one */; cursor:crosshair;}
+  .draggable2{position: fixed; top:50%; /*in conjunction with left property, decides the text position */ left:45%;  /*optional, though better have one */; cursor:crosshair;}
+  .draggable3{position: fixed; top:10%; /*in conjunction with left property, decides the text position */ left:75%;  /*optional, though better have one */; cursor:crosshair;}
+  .draggable4{position: fixed; top:30%; /*in conjunction with left property, decides the text position */ left:7%;  /*optional, though better have one */; cursor:crosshair;}
+  .draggable5{position: fixed; top:84%; /*in conjunction with left property, decides the text position */ left:83%;  /*optional, though better have one */; cursor:crosshair;}
+    
+    
+    
     .text9{position: absolute; top:75%; /*in conjunction with left property, decides the text position */ left:65%; width:400px; /*optional, though better have one */ font-size:700% ; font-weight:bold ; font-family: 'Nanum Gothic', sans-serif; color: blue; }
 
 
  
 </style>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( ".draggable" ).draggable();
+  } );
+  </script>
 
  
- <BODY >
+ <BODY style="overflow-y:hidden">
  	
- 	<div class="text1" > 사물도감 </div>
-  <div class="text2" > ABOUT </div>
+ 	<div class="text1" > 
+    <a herf="https://jenny4436.github.io/objectthing/" onmouseover="this.src='https://i.ibb.co/m4xF7pD/img1.png'" onmouseout="this.src='https://i.ibb.co/m4xF7pD/img1.png'"" > 사물도감</a>
+   </div>
+  <div class="text2" > ABOUT 
+    </div>
   <div class="text3" > BOOK </div>
-  <div class="text4" > 소지품 </div>
- 	 <div class="text5" > 내방 </div>
-   <div class="text6" > 화장실 </div>
-  <div class="text7" > 주방 </div>
-  <div class="text8" > 거실 </div>
+  
+ 	
+
+   <div class="image1">
+    <a href="file:///C:/Users/윤지은/Desktop/html/이상하고%20새로운%20짝꿍/지면2.html">
+    <img src="toilet.png" alt="Trulli" width="60%" height="auto" border="0.5">
+         <img src="img1.png" alt="Trulli" width="60%" height="auto" border="0">
+    </a> </div>
+    <div class="image2">
+    <a href="file:///C:/Users/윤지은/Desktop/html/이상하고%20새로운%20짝꿍/지면2.html">
+    <img src="myroom.png" alt="Trulli" width="40%" height="auto" border="0.5">
+         <img src="img2.png" alt="Trulli" width="40%" height="auto" border="0">
+    </a> </div>
+    <div class="image3">
+    <a href="file:///C:/Users/윤지은/Desktop/html/이상하고%20새로운%20짝꿍/지면2.html">
+    <img src="thing.png" alt="Trulli" width="50%" height="auto" border="0.5">
+         <img src="img3.png" alt="Trulli" width="30%" height="auto" border="0">
+    </a> </div>
+    <div class="image4">
+    <a href="file:///C:/Users/윤지은/Desktop/html/이상하고%20새로운%20짝꿍/지면2.html">
+    <img src="living.png" alt="Trulli" width="50%" height="auto" border="0">
+         <img src="img4.png" alt="Trulli" width="50%" height="auto" border="0">
+    </a> </div>
+    <div class="image5">
+    <a href="file:///C:/Users/윤지은/Desktop/html/이상하고%20새로운%20짝꿍/지면2.html">
+    <img src="kitchen.png" alt="Trulli" width="60%" height="auto" border="0">
+         <img src="img5.png" alt="Trulli" width="60%" height="auto" border="0">
+    </a> </div>
+      <div class="draggable draggable1">
+ <img src="img6.png" alt="Trulli" width="180" height="auto" border="0"> </div>
+  <div class="draggable draggable2">
+ <img src="img7.png" alt="Trulli" width="250" height="auto" border="0"> </div>
+ <div class="draggable draggable3">
+ <img src="img8.png" alt="Trulli" width="250" height="auto" border="0"> </div>
+ <div class="draggable draggable4">
+ <img src="img9.png" alt="Trulli" width="130" height="auto" border="0"> </div>
+ <div class="draggable draggable5">
+ <img src="img10.png" alt="Trulli" width="150" height="auto" border="0"> </div>
+ 
+  
+  
   <div class="text9" > FOOD </div>
    
    
